@@ -1,4 +1,4 @@
-const default_theme = "classic.css";
+const default_theme = "damn.css";
 const theme_storage_key = "jspaint theme";
 const disable_seasonal_theme_key = "jspaint disable seasonal theme";
 const href_for = theme => `styles/themes/${theme}`;
@@ -177,4 +177,3 @@ function make_grinch_button() {
 }
 
 export { get_theme, set_theme };
-

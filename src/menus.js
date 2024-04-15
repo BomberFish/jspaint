@@ -114,23 +114,23 @@ const menus = {
 			action: () => { file_load_from_url(); },
 			description: localize("Opens an image from the web."),
 		},
-		{
-			item: localize("&Upload To Imgur"),
-			speech_recognition: [
-				"upload to imgur", "upload image to imgur", "upload picture to imgur",
-			],
-			action: () => {
-				// include the selection in the saved image
-				deselect();
+		// {
+		// 	item: localize("&Upload To Imgur"),
+		// 	speech_recognition: [
+		// 		"upload to imgur", "upload image to imgur", "upload picture to imgur",
+		// 	],
+		// 	action: () => {
+		// 		// include the selection in the saved image
+		// 		deselect();
 
-				main_canvas.toBlob((blob) => {
-					sanity_check_blob(blob, () => {
-						show_imgur_uploader(blob);
-					});
-				});
-			},
-			description: localize("Uploads the active document to Imgur"),
-		},
+		// 		main_canvas.toBlob((blob) => {
+		// 			sanity_check_blob(blob, () => {
+		// 				show_imgur_uploader(blob);
+		// 			});
+		// 		});
+		// 	},
+		// 	description: localize("Uploads the active document to Imgur"),
+		// },
 		MENU_DIVIDER,
 		{
 			item: localize("Manage Storage"),
@@ -254,7 +254,8 @@ const menus = {
 					// Not all browsers support close() for closing a tab,
 					// so redirect instead. Exit to the official web desktop.
 					// @ts-ignore
-					window.location = "https://98.js.org/";
+					// window.location = "https://98.js.org/";
+					window.close();
 				});
 			},
 			description: localize("Quits Paint."),
@@ -948,6 +949,17 @@ const menus = {
 			emoji_icon: "💄",
 			item: localize("&Themes"),
 			submenu: [
+			  {
+					emoji_icon: "🐸",
+					item: "Anura Edition Default",
+					speech_recognition: [],
+					action: () => {
+											set_theme("damn.css");
+										},
+										enabled: () => get_theme() != "damn.css",
+										description: localize("The default theme."),
+				},
+				MENU_DIVIDER,
 				{
 					emoji_icon: "⬜",
 					item: localize("&Classic Light"),
@@ -1361,4 +1373,3 @@ for (const [top_level_menu_key, menu] of Object.entries(menus)) {
 }
 
 export { menus };
-

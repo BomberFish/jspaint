@@ -36,5 +36,5 @@ function afterSequence(sequence, action) {
 }
 
 export function onKonamiCodeEntered(action) {
-	addEventListener("keydown", afterSequence([38, 38, 40, 40, 37, 39, 37, 39, 66, 65], action));
+	// addEventListener("keydown", afterSequence([38, 38, 40, 40, 37, 39, 37, 39, 66, 65], action));
 }
