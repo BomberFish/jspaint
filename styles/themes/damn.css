@@ -1,0 +1,81 @@
+/* the damn css */
+
+@import "./modern.css";
+@import "./vista-esque-midnight-green.css";
+
+:root {
+	--theme-loaded: "damn.css";
+
+	--Hilight: rgb(26, 115, 232);
+	--HilightText: #ffffff;
+	--WindowText: #ffffff;
+	--ButtonText: #ffffff;
+
+	--accent-color: rgb(26, 115, 232);
+	--accent-color-hover: #1976D2;
+	--window-frame-active-color: #202124;
+	--window-frame-inactive-color: #202124;
+	--help-window-resizer-color: var(--window-frame-inactive-color);
+	--canvas-area-background-color: #212121;
+	--canvas-area-border-color: #000000;
+	--window-background-color: #3c3c3c;
+	--window-text-color: #ffffff;
+	--menu-background-color: #212121;
+	--menu-text-color: #ffffff;
+	--menu-hover-color: #212121;
+	--menu-active-color: #505050;
+	--menu-text-disabled-color: #8d8d8d;
+	--menu-text-active-color: #eeeeee;
+	--menu-divider-color: rgba(128, 128, 128, 0.3);
+	--selected-tool-color: rgba(128, 128, 128, 0.5);
+
+	/* Styles built-in controls like buttons. */
+	color-scheme: dark;
+}
+
+.window {
+    border-radius: 0!important;
+}
+
+body, button, input {
+    font-family: 'Roboto Flex', Roboto, RobotoDraft, 'Droid Sans', 'Helvetica Neue', Helvetica, Arial, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 14px;
+}
+
+.window-title-area {
+    padding: 3px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.window-title {
+    font-size: 13px;
+}
+
+.window-button {
+    scale: 0.8;
+    padding: 0
+}
+
+a {
+    color: var(--accent-color);
+}
+
+.tool-icon {
+	background-image: url("../../images/modern/modern-dark-tools.png");
+	background-position: calc(-16px * (var(--icon-index) * 2 + 1)) -16px;
+}
+.tool-icon.use-svg,
+.eye-gaze-mode .tool-icon.use-svg {
+	background-image: url("../../images/modern/modern-dark-tools.svg");
+	background-position: calc(-16px * (var(--icon-index) * 2 + 1)) -16px;
+}
+
+.eye-gaze-mode .toggle-dwell-clicking .button-icon {
+	background: url(../../images/dark/eye-gaze-pause.svg);
+}
+.eye-gaze-mode.eye-gaze-mode-paused .toggle-dwell-clicking .button-icon {
+	background: url(../../images/dark/eye-gaze-unpause.svg);
+}
