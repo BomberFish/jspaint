@@ -1,0 +1,12 @@
+{
+  "name": "Paint",
+  "type": "auto",
+  "package": "bomberfish.paint",
+  "index": "index.html",
+  "icon": "doom.png",
+  "wininfo": {
+    "title": "Paint",
+    "width": "640px",
+    "height": "480px"
+  }
+}
