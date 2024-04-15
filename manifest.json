@@ -3,7 +3,7 @@
   "type": "auto",
   "package": "bomberfish.paint",
   "index": "index.html",
-  "icon": "doom.png",
+  "icon": "128x128.png",
   "wininfo": {
     "title": "Paint",
     "width": "640px",
