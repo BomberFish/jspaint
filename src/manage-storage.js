@@ -61,7 +61,7 @@ function manage_storage() {
 		const $remove = $(E("button")).text("Remove").addClass("remove-button").attr("type", "button");
 		const href = `#${k.replace("image#", "local:")}`;
 		// Electron app is a single window for now. This isn't a great experience, but it's better a broken link.
-		const target = window.is_electron_app ? "_self" : "_blank";
+		const target = "_self"
 		const $open_link = $(E("a")).attr({ href, target }).text(localize("Open"));
 		const $thumbnail_open_link = $(E("a")).attr({ href, target }).addClass("thumbnail-container");
 		$thumbnail_open_link.append($img);
